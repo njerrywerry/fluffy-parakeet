@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngRoute'])
 .directive('hello', [function() {
   return {
     restrict: 'CEMA', // C: class, E: element, M: comments, A: attributes
@@ -15,4 +15,11 @@ angular.module('myApp', [])
     { name: 'Do Assignments', completed: false },
     { name: 'Be awesome!', completed: false },
   ];
+}])
+.config(['$routeProvider', function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: '/todos.html',
+    controller: 'TodoController'
+  });
 }]);
