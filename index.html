@@ -9,9 +9,10 @@
   <ng-view></ng-view>
 
     <script type = "text/ng-template" id = "/todos.html">
+      Search: <input type = "text" ng-model = "search.name">
       <ul>
         Stuff To Do
-        <li ng-repeat = "todo in todos">
+        <li ng-repeat = "todo in todos | filter: search">
           <input type = "checkbox" ng-model = "todo.completed">
           <a href = "#/{{$index}}">{{ todo.name }}</a>
         </li>
