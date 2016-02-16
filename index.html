@@ -7,7 +7,11 @@
   <body>
 
   <ng-view></ng-view>
+  <!-- libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
 
+    <!-- Templates -->
     <script type = "text/ng-template" id = "/todos.html">
       Search: <input type = "text" ng-model = "search.name">
       <ul>
@@ -25,8 +29,7 @@
       note: <textarea>{{ todo.note }}</textarea>
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+    <!-- js script -->
     <script src = "app.js"></script>
 
   </body>

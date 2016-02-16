@@ -1,5 +1,6 @@
 angular.module('myApp', ['ngRoute'])
 
+// Services
 .factory('Todos', function() {
   return [
     { name: 'Do Dishes', completed: false, note: 'add notes...' },
@@ -11,6 +12,7 @@ angular.module('myApp', ['ngRoute'])
   ];
 })
 
+// Controllers
 .controller('TodoController', ['$scope', 'Todos', function ($scope, Todos) {
   $scope.todos = Todos;
 }])
@@ -19,6 +21,7 @@ angular.module('myApp', ['ngRoute'])
   $scope.todo = Todos[$routeParams.id];
 }])
 
+// Routes
 .config(['$routeProvider', function ($routeProvider) {
   $routeProvider
   .when('/', {
