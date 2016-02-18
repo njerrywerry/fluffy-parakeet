@@ -1,3 +1,4 @@
 ## Angular
 
-A taste of AngularJS.
+A static single page AngularJS app.
+
